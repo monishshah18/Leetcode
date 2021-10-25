@@ -5,29 +5,27 @@ class MinStack:
             self.next = next
 
     def __init__(self):
-        """
-        initialize your data structure here.
-        """
+        self.nums = []
         self.smallest = None
-        self.stack = []
-        
 
     def push(self, val: int) -> None:
-        self.stack.append(val)
+        self.nums.append(val)
         if not self.smallest or val <= self.smallest.val:
             l = ListNode(val, next = self.smallest)
             self.smallest = l
 
     def pop(self) -> None:
-        p = self.stack.pop()
-        if self.smallest and self.smallest.val == p:
+        p = self.nums.pop()
+        if self.smallest and self.smallest.val==p:
             self.smallest = self.smallest.next
 
     def top(self) -> int:
-        return self.stack[-1]
+        return self.nums[-1]
+        
 
     def getMin(self) -> int:
         return self.smallest.val if self.smallest else None
+        
 
 
 # Your MinStack object will be instantiated and called as such:
