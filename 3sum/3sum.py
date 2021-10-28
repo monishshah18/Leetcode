@@ -11,4 +11,3 @@ class Solution:
                         res.add((nums[i],nums[j],sol))
                 _set.add(nums[i])
         return list(res)
-        
