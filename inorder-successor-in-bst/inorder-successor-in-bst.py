@@ -7,11 +7,11 @@
 
 class Solution:
     def inorderSuccessor(self, root: 'TreeNode', p: 'TreeNode') -> 'TreeNode':
-        succ = None
+        successor = None
         while root:
             if p.val < root.val:
-                succ = root
+                successor = root
                 root = root.left
             else:
                 root = root.right
-        return succ
+        return successor
