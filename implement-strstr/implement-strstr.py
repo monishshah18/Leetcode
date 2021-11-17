@@ -3,10 +3,7 @@ class Solution:
         if haystack == "" and needle == "":
             return 0
         try:
-            temp = haystack.index(needle)
-            return temp
+            return haystack.index(needle)
         except:
             return -1
-        # if temp:
-        #     return temp
-        
+            
