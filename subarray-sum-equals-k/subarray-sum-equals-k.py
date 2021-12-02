@@ -9,3 +9,4 @@ class Solution:
             count += d.get(sums-k,0)
             d[sums] = d.get(sums,0) + 1
         return count
+    
