@@ -13,13 +13,13 @@ class Solution:
         if not root:
             return None
         curr = root
-        next = root.left
+        _next = root.left
         while curr.left:
             curr.left.next = curr.right
             if curr.next:
                 curr.right.next = curr.next.left
                 curr = curr.next
             else:
-                curr = next
-                next = curr.left
+                curr = _next
+                _next = curr.left
         return root
